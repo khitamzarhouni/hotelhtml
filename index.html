@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Prédiction d'annulation</title>
+    <style>
+        body { font-family: Arial; margin: 50px; }
+        form { max-width: 400px; margin: auto; }
+        input[type="number"] { width: 100%; padding: 8px; margin: 8px 0; }
+        input[type="submit"] { padding: 10px 20px; background-color: #28a745; color: white; border: none; }
+    </style>
+</head>
+<body>
+    <h2>Prédire si une réservation sera annulée</h2>
+    <form method="POST" action="/predict">
+        <label>Lead Time:</label>
+        <input type="number" name="lead_time" required>
+
+        <label>Stays in Weekend Nights:</label>
+        <input type="number" name="stays_in_weekend_nights" required>
+
+        <label>Stays in Week Nights:</label>
+        <input type="number" name="stays_in_week_nights" required>
+
+        <label>Adults:</label>
+        <input type="number" name="adults" required>
+
+        <label>Children:</label>
+        <input type="number" name="children" required>
+
+        <label>Babies:</label>
+        <input type="number" name="babies" required>
+
+        <label>ADR (Average Daily Rate):</label>
+        <input type="number" step="any" name="adr" required>
+
+        <label>Total of Special Requests:</label>
+        <input type="number" name="total_of_special_requests" required>
+
+        <input type="submit" value="Prédire">
+    </form>
+</body>
+</html>
